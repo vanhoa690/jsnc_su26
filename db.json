@@ -1,0 +1,16 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "Nhà giả kim",
+      "year": 2000,
+      "cover": "https://cdn0.fahasa.com/media/catalog/product/i/m/image_195509_1_36793.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Tôi thấy hoa vàng trên cỏ xanh",
+      "year": 2000,
+      "cover": "https://cdn0.fahasa.com/media/catalog/product/n/n/nna-hvtcx.jpg"
+    }
+  ]
+}
