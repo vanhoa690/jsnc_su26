@@ -3,15 +3,10 @@
 ## Nội dung bài học
 
 - JavaScript là gì?
-- Cách nhúng JavaScript vào HTML
 - Khai báo biến
 - Kiểu dữ liệu
 - Hiển thị dữ liệu
 - Template String
-- Object
-- Truy cập dữ liệu Object
-- Cập nhật Object
-- Hiển thị Object lên HTML
 
 ---
 
@@ -44,19 +39,15 @@ const school = "FPT Polytechnic";
 let name = "Hoà";
 let age = 30;
 let isAdmin = true;
-let score = null;
-let address;
 ```
 
-Kiểu Ví dụ
+Ví dụ
 
 ---
 
-String "Hello"
-Number 20
-Boolean true
-Null null
-Undefined undefined
+- String: "Hello", "Xin chào"
+- Number: 20, 10
+- Boolean: true, false
 
 ## 6. Hiển thị dữ liệu
 
@@ -149,11 +140,9 @@ document.getElementById("book").innerHTML = `
 
 - Biến (`let`, `const`)
 - Kiểu dữ liệu
-- `console.log()`
 - `innerHTML`
 - Template String
 - Object
-- Truy cập và cập nhật Object
 - Hiển thị Object lên HTML
 
 ## Bài tập
