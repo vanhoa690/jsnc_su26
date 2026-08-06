@@ -2,15 +2,62 @@
 
 ## Nội dung bài học
 
+- Hiển thị Object lên Table
 - Array là gì?
 - Array chứa Object
-- Hiển thị dữ liệu dạng Table
 - Hàm `map()`
 - `join("")`
 
 ---
 
-## 1. Array là gì?
+## 1. Hiển thị Object lên Table
+
+Ở bài trước chúng ta đã hiển thị Object bằng `div`. Bây giờ sẽ hiển thị Object dưới dạng bảng (`table`).
+
+HTML
+
+```html
+<table border="1">
+  <thead>
+    <tr>
+      <th>Họ tên</th>
+      <th>Tuổi</th>
+      <th>Email</th>
+      <th>Chuyên ngành</th>
+    </tr>
+  </thead>
+
+  <tbody id="student"></tbody>
+</table>
+```
+
+JavaScript
+
+```js
+const student = {
+  name: "Nguyễn Văn A",
+  age: 20,
+  email: "vana@gmail.com",
+  major: "CNTT",
+};
+
+document.getElementById("student").innerHTML = `
+<tr>
+  <td>${student.name}</td>
+  <td>${student.age}</td>
+  <td>${student.email}</td>
+  <td>${student.major}</td>
+</tr>
+`;
+```
+
+Ở ví dụ trên chúng ta chỉ có **1 Object** nên bảng chỉ hiển thị **1 dòng dữ liệu**.
+
+Nếu muốn hiển thị nhiều sinh viên, chúng ta sẽ lưu dữ liệu vào **Array**.
+
+---
+
+## 2. Array là gì?
 
 Array (Mảng) dùng để lưu nhiều dữ liệu.
 
@@ -27,7 +74,7 @@ console.log(numbers[1]);
 
 ---
 
-## 2. Array Object
+## 3. Array Object
 
 Trong thực tế, chúng ta thường lưu danh sách Object.
 
@@ -60,24 +107,6 @@ console.log(students[1].age);
 
 ---
 
-## 3. Tạo Table trên HTML
-
-```html
-<table border="1">
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Tên</th>
-      <th>Tuổi</th>
-    </tr>
-  </thead>
-
-  <tbody id="student-list"></tbody>
-</table>
-```
-
----
-
 ## 4. Hàm `map()`
 
 `map()` giúp duyệt qua từng phần tử của mảng.
@@ -102,7 +131,25 @@ Kết quả:
 
 ---
 
-## 5. Hiển thị dữ liệu lên Table
+## 5. Hiển thị danh sách lên Table
+
+HTML
+
+```html
+<table border="1">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Tên</th>
+      <th>Tuổi</th>
+    </tr>
+  </thead>
+
+  <tbody id="student-list"></tbody>
+</table>
+```
+
+JavaScript
 
 ```js
 const students = [
@@ -126,11 +173,11 @@ const students = [
 const html = students
   .map(
     (student) => `
-    <tr>
-        <td>${student.id}</td>
-        <td>${student.name}</td>
-        <td>${student.age}</td>
-    </tr>
+<tr>
+  <td>${student.id}</td>
+  <td>${student.name}</td>
+  <td>${student.age}</td>
+</tr>
 `,
   )
   .join("");
@@ -150,7 +197,7 @@ const arr = ["A", "B", "C"];
 console.log(arr);
 ```
 
-Muốn nối các phần tử thành một chuỗi, sử dụng `join("")`.
+Muốn nối các phần tử thành một chuỗi:
 
 ```js
 console.log(arr.join(""));
@@ -169,8 +216,6 @@ Trong ví dụ trên, chúng ta dùng:
 ```
 
 để nối các dòng HTML trước khi gán vào `innerHTML`.
-
----
 
 ## Tổng kết
 
