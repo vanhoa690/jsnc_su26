@@ -86,16 +86,10 @@ http://localhost:3000/students
 
 ## 3. Cài đặt Axios
 
-Có thể tải Axios bằng CDN.
+Có thể tải Axios bằng CDN, nhúng **script** trong **html**.
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-```
-
-Hoặc cài bằng npm (sử dụng sau này).
-
-```bash
-npm install axios
 ```
 
 Trong khóa học này chúng ta sẽ sử dụng **CDN** để đơn giản hơn.
@@ -126,11 +120,8 @@ Trong khóa học này chúng ta sẽ sử dụng **CDN** để đơn giản hơ
 ## 5. Gọi API với Axios
 
 ```js
-axios({
-  url: "http://localhost:3000/students",
-  method: "GET",
-}).then((response) => {
-  console.log(response.data);
+axios.get("http://localhost:3000/students").then((res) => {
+  console.log(res.data);
 });
 ```
 
@@ -158,11 +149,8 @@ response.data;
 ## 6. Hiển thị dữ liệu lên Table
 
 ```js
-axios({
-  url: "http://localhost:3000/students",
-  method: "GET",
-}).then((response) => {
-  const html = response.data
+axios.get("http://localhost:3000/students").then((res) => {
+  const html = res.data
     .map(
       (student) => `
         <tr>
@@ -189,11 +177,8 @@ Sau khi chạy, bảng sẽ hiển thị toàn bộ danh sách sinh viên.
 
 ```js
 function loadStudents() {
-  axios({
-    url: "http://localhost:3000/students",
-    method: "GET",
-  }).then((response) => {
-    const html = response.data
+  axios.get("http://localhost:3000/students").then((res) => {
+    const html = res.data
       .map(
         (student) => `
         <tr>
@@ -270,11 +255,8 @@ project
 
 ```js
 function loadStudents() {
-  axios({
-    url: "http://localhost:3000/students",
-    method: "GET",
-  }).then((response) => {
-    const html = response.data
+  axios.get("http://localhost:3000/students").then((res) => {
+    const html = res.data
       .map(
         (student) => `
         <tr>
