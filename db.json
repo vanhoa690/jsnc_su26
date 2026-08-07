@@ -1,16 +1,22 @@
 {
-  "books": [
+  "students": [
     {
       "id": 1,
-      "title": "Nhà giả kim",
-      "year": 2000,
-      "cover": "https://cdn0.fahasa.com/media/catalog/product/i/m/image_195509_1_36793.jpg"
+      "name": "Nguyễn Văn A",
+      "age": 20,
+      "email": "a@gmail.com"
     },
     {
       "id": 2,
-      "title": "Tôi thấy hoa vàng trên cỏ xanh",
-      "year": 2000,
-      "cover": "https://cdn0.fahasa.com/media/catalog/product/n/n/nna-hvtcx.jpg"
+      "name": "Trần Văn B",
+      "age": 21,
+      "email": "b@gmail.com"
+    },
+    {
+      "id": 3,
+      "name": "Lê Văn C",
+      "age": 22,
+      "email": "c@gmail.com"
     }
   ]
 }
