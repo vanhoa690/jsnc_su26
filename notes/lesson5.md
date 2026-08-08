@@ -123,7 +123,7 @@ có nghĩa là xóa sinh viên có `id = 1`.
 
 ```js
 function deleteStudent(id) {
-  axios(`http://localhost:3000/students/${id}`).then(() => {
+  axios.delete(`http://localhost:3000/students/${id}`).then(() => {
     loadStudents();
   });
 }
