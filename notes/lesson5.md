@@ -16,18 +16,15 @@
 Ở Lesson 4, chúng ta sử dụng Axios để lấy danh sách:
 
 ```js
-axios({
-  url: "http://localhost:3000/students",
-  method: "GET",
-}).then((response) => {
-  console.log(response.data);
+axios.get("http://localhost:3000/students").then((res) => {
+  console.log(res.data);
 });
 ```
 
 Dữ liệu trả về nằm trong:
 
 ```js
-response.data;
+res.data;
 ```
 
 ---
@@ -56,11 +53,8 @@ JavaScript:
 
 ```js
 function loadStudents() {
-  axios({
-    url: "http://localhost:3000/students",
-    method: "GET",
-  }).then((response) => {
-    const html = response.data
+  axios.get("http://localhost:3000/students").then((res) => {
+    const html = res.data
       .map(
         (student) => `
           <tr>
@@ -112,10 +106,7 @@ DELETE
 Ví dụ:
 
 ```js
-axios({
-  url: "http://localhost:3000/students/1",
-  method: "DELETE",
-});
+axios.delete("http://localhost:3000/students/1");
 ```
 
 Trong đó:
@@ -132,10 +123,7 @@ có nghĩa là xóa sinh viên có `id = 1`.
 
 ```js
 function deleteStudent(id) {
-  axios({
-    url: `http://localhost:3000/students/${id}`,
-    method: "DELETE",
-  }).then(() => {
+  axios(`http://localhost:3000/students/${id}`).then(() => {
     loadStudents();
   });
 }
@@ -202,10 +190,7 @@ function deleteStudent(id) {
   const result = confirm("Bạn có chắc chắn muốn xóa không?");
 
   if (result) {
-    axios({
-      url: `http://localhost:3000/students/${id}`,
-      method: "DELETE",
-    }).then(() => {
+    axios.delete(`http://localhost:3000/students/${id}`).then(() => {
       loadStudents();
     });
   }
@@ -273,11 +258,8 @@ Hiển thị danh sách mới
 
 ```js
 function loadStudents() {
-  axios({
-    url: "http://localhost:3000/students",
-    method: "GET",
-  }).then((response) => {
-    const html = response.data
+  axios.get("http://localhost:3000/students").then((res) => {
+    const html = res.data
       .map(
         (student) => `
           <tr>
@@ -303,10 +285,7 @@ function deleteStudent(id) {
   const result = confirm("Bạn có chắc chắn muốn xóa không?");
 
   if (result) {
-    axios({
-      url: `http://localhost:3000/students/${id}`,
-      method: "DELETE",
-    }).then(() => {
+    axios.delete(`http://localhost:3000/students/${id}`).then(() => {
       loadStudents();
     });
   }
