@@ -5,18 +5,6 @@
       "name": "Nguyễn Văn A",
       "age": 20,
       "email": "a@gmail.com"
-    },
-    {
-      "id": 2,
-      "name": "Trần Văn B",
-      "age": 21,
-      "email": "b@gmail.com"
-    },
-    {
-      "id": 3,
-      "name": "Lê Văn C",
-      "age": 22,
-      "email": "c@gmail.com"
     }
   ]
 }
