@@ -28,7 +28,7 @@ axios.post("http://localhost:3000/students", {
 });
 ```
 
-Sau khi gọi API, sản phẩm mới sẽ được thêm vào `db.json`.
+Sau khi gọi API, sinh viên mới sẽ được thêm vào `db.json`.
 
 ---
 
