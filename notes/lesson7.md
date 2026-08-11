@@ -22,7 +22,7 @@ Ví dụ:
 
 ```js
 axios.post("http://localhost:3000/students", {
-  name: "iPhone 15",
+  name: "nguyen van a",
   age: 25,
   email: "a@gmail.com",
 });
