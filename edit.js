@@ -1,18 +1,20 @@
-console.log("add them");
-
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
 // addStudent();
 document.getElementById("form-add").addEventListener("submit", (e) => {
   e.preventDefault();
   const name = document.getElementById("name").value;
   const age = document.getElementById("age").value;
+  const email = document.getElementById("email").value;
 
+  console.log(name, age);
   axios
-    .post("http://localhost:3000/students", {
+    .put(`http://localhost:3000/students/${id}`, {
       name: name,
       age: age,
-      email: "hoadv@gmail.com",
+      email: email,
     })
     .then(() => {
-      alert("them thanh cong");
+      alert("update thanh cong");
     });
 });
