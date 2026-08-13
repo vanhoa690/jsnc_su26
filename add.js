@@ -1,6 +1,3 @@
-console.log("add them");
-
-// addStudent();
 document.getElementById("form-add").addEventListener("submit", (e) => {
   e.preventDefault();
   const name = document.getElementById("name").value;
@@ -14,5 +11,6 @@ document.getElementById("form-add").addEventListener("submit", (e) => {
     })
     .then(() => {
       alert("them thanh cong");
+      window.location.href = "index.html";
     });
 });

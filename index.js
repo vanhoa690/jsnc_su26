@@ -10,7 +10,7 @@ function loadStudents() {
             <td>${student.email}</td>
             <td >
               <div class="flex items-center justify-center gap-2">
-                <a href="edit.html" class="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded">Sua</a>
+                <button onclick="goToEdit(${student.id})" class="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded">Sua</button>
                 <button onclick="deleteStudent(${student.id})"class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded">Xoa</button>
               </div>
               </td>
@@ -31,4 +31,8 @@ function deleteStudent(id) {
       loadStudents();
     });
   }
+}
+
+function goToEdit(id) {
+  window.location.href = `edit.html?id=${id}`;
 }
