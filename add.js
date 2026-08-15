@@ -10,7 +10,11 @@ document.getElementById("form-add").addEventListener("submit", (e) => {
       email: "hoadv@gmail.com",
     })
     .then(() => {
-      alert("them thanh cong");
-      window.location.href = "index.html";
+      location.replace("index.html");
+      alert("Thêm bộ phim thành công");
+    })
+    .catch((error) => {
+      console.error(error);
+      alert("Thêm bộ phim thất bại");
     });
 });
